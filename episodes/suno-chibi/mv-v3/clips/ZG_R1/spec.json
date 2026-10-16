@@ -1,0 +1,11 @@
+{
+  "id": "ZG_R1",
+  "status": "new",
+  "reference": "zg_cu",
+  "drive": "silence",
+  "source_start_frame": 148,
+  "source_end_frame": 179,
+  "lead_frames": 0,
+  "generation_frames": 73,
+  "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nClose-up reaction of Zhuge Liang facing three-quarter toward screen LEFT, the blurred crimson shoulder of Zhou Yu at the left edge of frame. Tiny handheld push-in. He stops his fan mid-air at chest height, raises one eyebrow and lets a slow amused half-smile appear, lips closed.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+}

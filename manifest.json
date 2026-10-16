@@ -6,13 +6,18 @@
   },
   {
     "path": ".gitignore",
-    "bytes": 122,
-    "sha256": "776ec858bb76505b441e511e7431452e9c2a5636156951dbf418ae123266527d"
+    "bytes": 157,
+    "sha256": "51d0a6b24e7aac060ca200e13e5d9b7a6baa6b93b87d8184fa7adc2bc9aa6e2f"
   },
   {
     "path": "CLAUDE.md",
     "bytes": 2180,
     "sha256": "708e89204ca65a266e31deffd637fff256cb77267d784da9ffc2cb9e9be3d78f"
+  },
+  {
+    "path": "README.md",
+    "bytes": 4919,
+    "sha256": "ec3185e7b80719cd841d714aa54d4676fec49de58351dca1a17167743279f4d8"
   },
   {
     "path": "episodes/suno-chibi/mv-v2/A01/drive.wav",
@@ -510,11 +515,6 @@
     "sha256": "0c6d1ebb5813e4ae4e1ce7312dfcf72f947389d0cd8393e80fd4075e3ce2d6ec"
   },
   {
-    "path": "episodes/suno-chibi/mv-v2/crowd.png",
-    "bytes": 2075081,
-    "sha256": "4616b9a8a77601ce482c606b0d8550c073e6392897b8855adb7a1dbb4b6cab1a"
-  },
-  {
     "path": "episodes/suno-chibi/mv-v2/END01/drive.wav",
     "bytes": 992078,
     "sha256": "60c3f723aae93f51604372f46914683ec4d435ac7311c1fd0bade024a374abe3"
@@ -615,21 +615,6 @@
     "sha256": "bab365423f3af2a446ff2f1abbdbc96fb4ca98eb359cf7024f9c53f043e5383d"
   },
   {
-    "path": "episodes/suno-chibi/mv-v2/extra-image-prompts.json",
-    "bytes": 1746,
-    "sha256": "ed42dbec52a2079cfb9fb73f33902397f122affafb738a505b59e56112f61be6"
-  },
-  {
-    "path": "episodes/suno-chibi/mv-v2/image-prompts.json",
-    "bytes": 3454,
-    "sha256": "785777daa4c3706b360145f8bb122c5df2c6451b9c697b3485a0753b0329f8d5"
-  },
-  {
-    "path": "episodes/suno-chibi/mv-v2/master.png",
-    "bytes": 2474427,
-    "sha256": "7879fd48d422805ca64549e571c38366ae39f90c5a926f159ab46ee691dc71f7"
-  },
-  {
     "path": "episodes/suno-chibi/mv-v2/OPEN/drive.wav",
     "bytes": 584078,
     "sha256": "799948296d1a1b3481757166e4a76cd62805b14826d032f3b9ab831897c82bab"
@@ -678,6 +663,26 @@
     "path": "episodes/suno-chibi/mv-v2/OPEN/video.mp4",
     "bytes": 2406687,
     "sha256": "68f537d3205381804fcd0c89381c25b5409eeb9cd1e6777c4fff0a16b7b38d9e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v2/crowd.png",
+    "bytes": 2075081,
+    "sha256": "4616b9a8a77601ce482c606b0d8550c073e6392897b8855adb7a1dbb4b6cab1a"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v2/extra-image-prompts.json",
+    "bytes": 1746,
+    "sha256": "ed42dbec52a2079cfb9fb73f33902397f122affafb738a505b59e56112f61be6"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v2/image-prompts.json",
+    "bytes": 3454,
+    "sha256": "785777daa4c3706b360145f8bb122c5df2c6451b9c697b3485a0753b0329f8d5"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v2/master.png",
+    "bytes": 2474427,
+    "sha256": "7879fd48d422805ca64549e571c38366ae39f90c5a926f159ab46ee691dc71f7"
   },
   {
     "path": "episodes/suno-chibi/mv-v2/parameter-audit.json",
@@ -740,6 +745,396 @@
     "sha256": "55ed102e7cca1341342e481ec78a9bc5a93e90f7168f7dfb3e69d91c68b2f94f"
   },
   {
+    "path": "episodes/suno-chibi/mv-v3/GPT执行手册.md",
+    "bytes": 3766,
+    "sha256": "7ae3398ba5a5bfdce844f1563a4b4cafbffc4044089d7033e339f2fc23a6775d"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/PAUSED.txt",
+    "bytes": 121,
+    "sha256": "5172c5f75567b778fea1c26ff91f2d468e22c263136c0849eba48646e4970acf"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/completed-task.json",
+    "bytes": 98,
+    "sha256": "ecddde301b48ed123a55ef48b31bcd9a15ca4604ff041b5e56a91c9fcd0d5bba"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/drive.wav",
+    "bytes": 584078,
+    "sha256": "db91db16671a2001daae85691f5e48b589a3f9a169753eae8e40e34ea75c5ee2"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/history.json",
+    "bytes": 9298,
+    "sha256": "fd2b6e83ba54631ef3cbe5320f7b04df59c051b66ac03b6ff329ae3e71b8d0d0"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/mix.wav",
+    "bytes": 584078,
+    "sha256": "fbae6884284310f44001708a25104590c42f50096618fb3d9051b96a77f83f96"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/preview.jpg",
+    "bytes": 56967,
+    "sha256": "5f1186bd83f24ef33333240eb6dc0d755e7ef6f2fdf0ec69c2d99ecfe4da6b23"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/request.json",
+    "bytes": 6849,
+    "sha256": "519633e4127ab36756014f92a77c8bd4cab9cc05f74bc1b4ac510f1d0bce0288"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/review.jpg",
+    "bytes": 132984,
+    "sha256": "2930513b031ce9e7e7a0ca2c1f74d7ccbb3997915110f6cedbb81abb854cf9d2"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/spec.json",
+    "bytes": 2777,
+    "sha256": "01cb388491cf35f732e8e96be8cd1edd8b071ca7e6dc561ac6eda47b0ab363da"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/validation.json",
+    "bytes": 364,
+    "sha256": "e7400e6b3d55b76c93762c41f55c09a7a858257bdf38b73d957bbc2a51b0d878"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A01/video.mp4",
+    "bytes": 2061624,
+    "sha256": "4c921e2d80f1622fb26ece3f21864a7924d2b9f5896dc53fddcfcdb107514b49"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A02/drive.wav",
+    "bytes": 584078,
+    "sha256": "49611434f82ebefd43c010ad52f273519a448934475d617f78486b30071acd25"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A02/mix.wav",
+    "bytes": 584078,
+    "sha256": "f70a7939a3ccb19b6160a3d4ae34ff11de11dd2e2388999e2cf1a3de3b8ba099"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A02/spec.json",
+    "bytes": 2693,
+    "sha256": "f6f53109f2443ea1b8db246e3ec72e79912e740af5a1a4c1ebb68cd2d84624e0"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A03/spec.json",
+    "bytes": 65,
+    "sha256": "64fe799bd39628a5f921983cc5f20df0b4995de09e565ed2e2677cba31795e92"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A03/video.mp4",
+    "bytes": 1899732,
+    "sha256": "1ec99dedff23dc61a9b8e5f8ea96164d4eb651941773f252582c0fc74d3c0117"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A04/drive.wav",
+    "bytes": 720078,
+    "sha256": "db0efef92dde7be2f84651277f40a7bb1e716f06762735df42a62f41a402bc3b"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A04/mix.wav",
+    "bytes": 720078,
+    "sha256": "d951bc7fa7de6e07aeaa4041c834cf6e54855aa30f9aa5160a729d1ea5c01854"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/A04/spec.json",
+    "bytes": 2799,
+    "sha256": "4c78946e86f503ac14358cb00aa4dccc0ab6f1c0dd585ff44b81700b67cff640"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B01/drive.wav",
+    "bytes": 584078,
+    "sha256": "79d5a2ac8e71b886aa4161c30f19e4d408d706c0238451d2449003199ebc9d58"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B01/mix.wav",
+    "bytes": 584078,
+    "sha256": "ebe1d771cacbcafc3acf3934a8f77c8aa653133abd096bb5ea475aaa6c3e78d0"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B01/spec.json",
+    "bytes": 2705,
+    "sha256": "3e4b10409e9c88c0a3d08849c0a2a791980eb4e7b1967f09f421ca3e766e7de9"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B02/drive.wav",
+    "bytes": 584078,
+    "sha256": "f26581a8b23ce9c78e685a2d1d9c8a458ad185cbb86107250cf56d1c31065e3d"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B02/mix.wav",
+    "bytes": 584078,
+    "sha256": "f8e2f905e029e4398a64c656f6becb9e48f7b1f873ac795c9bd73159f5eae11c"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B02/spec.json",
+    "bytes": 2710,
+    "sha256": "2e40c3c353fcada64b59a386bf6b0c53f130285f73ce44168649646cae36660c"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B03/drive.wav",
+    "bytes": 584078,
+    "sha256": "bb39d06e3fa3c98346a7f9218244342af575b41998478752ddfa04ffe3a26a96"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B03/mix.wav",
+    "bytes": 584078,
+    "sha256": "81d1f2b28f55f0a2937bb9fbbd7764f6f2d2125a46f0ecacfb6a7163f67bd48a"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B03/spec.json",
+    "bytes": 2639,
+    "sha256": "eddcc4d8db975e31e7095dbb04754084b3bf36d4613326f75d3b95d2c0e860d8"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B04/drive.wav",
+    "bytes": 720078,
+    "sha256": "81824c8d8e96674ee6d8849084dac03e3fcbfdbfbde09c6ff8e01d2506c9fbc7"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B04/mix.wav",
+    "bytes": 720078,
+    "sha256": "4f2136148d454c8c5a8c14c6628df23a5d834e8dce64d501be3d967d91bb389b"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/B04/spec.json",
+    "bytes": 2694,
+    "sha256": "7c8f5b0f5678cda5c9f28a0097b5887f21961a423b45489196f3cea7997f2634"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/CHAMP/drive.wav",
+    "bytes": 584078,
+    "sha256": "819fa0d464dab46b5bea5dc4c4f96c446eec6610455ffeb60abce44561acc55e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/CHAMP/mix.wav",
+    "bytes": 584078,
+    "sha256": "2fe60514de7f3f387253d19c321e5a532738e259e16ac0ab8132ad86f79de1ee"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/CHAMP/spec.json",
+    "bytes": 2252,
+    "sha256": "999f75b864d88641a317c277722fda11994d87f74676985b6b27b0468efad8ac"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/END02B/spec.json",
+    "bytes": 71,
+    "sha256": "99d92a5ab9e6d1bf4c355c6e1e08a904fa9097d1ab43497c34b70c4d12db7ff8"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/END02B/video.mp4",
+    "bytes": 4455797,
+    "sha256": "bab365423f3af2a446ff2f1abbdbc96fb4ca98eb359cf7024f9c53f043e5383d"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/FAN/drive.wav",
+    "bytes": 584078,
+    "sha256": "819fa0d464dab46b5bea5dc4c4f96c446eec6610455ffeb60abce44561acc55e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/FAN/mix.wav",
+    "bytes": 584078,
+    "sha256": "32b21b4271319e1fc81bf645d6451319d5fe587db53a42cee9291dad200fcd53"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/FAN/spec.json",
+    "bytes": 2153,
+    "sha256": "dfbf3197b96498d89db6a965bfa6314ebb71269b4de2e83e055aee576c33d04e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/OPEN3/drive.wav",
+    "bytes": 584078,
+    "sha256": "86dfa0a8c433d214c2cb46f36dca56af4f13dd7deb2ee73c5099531bf881888a"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/OPEN3/mix.wav",
+    "bytes": 584078,
+    "sha256": "d21e043b72f5e795adcc33381d930ddf92afe17e63412d02a8a5822fb809b186"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/OPEN3/spec.json",
+    "bytes": 2839,
+    "sha256": "3d074eac10be781f7807cdc54b00ee58f1f7382c73dd01b4b48b8ea7f7319020"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/RING/drive.wav",
+    "bytes": 584078,
+    "sha256": "819fa0d464dab46b5bea5dc4c4f96c446eec6610455ffeb60abce44561acc55e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/RING/mix.wav",
+    "bytes": 584078,
+    "sha256": "6863d9df04fa7326da0315c375721db41e735f3da6a4309ee0bc739893702d23"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/RING/spec.json",
+    "bytes": 2300,
+    "sha256": "390bae3c63bf3d74976795a03c8f765d539c8789ad03d858af8919930d37a82f"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_R1/drive.wav",
+    "bytes": 584078,
+    "sha256": "819fa0d464dab46b5bea5dc4c4f96c446eec6610455ffeb60abce44561acc55e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_R1/mix.wav",
+    "bytes": 584078,
+    "sha256": "abdd7491ac4e984380c1575526f30cc2c2367de8173c9d74b44c5ba34368534a"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_R1/spec.json",
+    "bytes": 2106,
+    "sha256": "5d7db9111c7d2eabed86ba330a55304511d08a391420fa57cbc8e58d11f4f931"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_R2/drive.wav",
+    "bytes": 584078,
+    "sha256": "819fa0d464dab46b5bea5dc4c4f96c446eec6610455ffeb60abce44561acc55e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_R2/mix.wav",
+    "bytes": 584078,
+    "sha256": "edcee61a3114d8678714f834462157f25ee9df79440a210ebce7ff8024b9a813"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_R2/spec.json",
+    "bytes": 2192,
+    "sha256": "763b7822added9caff4bc1395247f29910c462694319998b4e8107a68e144373"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_YEAH/drive.wav",
+    "bytes": 584078,
+    "sha256": "d8a6e0fab5305aabf9aea71f205760079af0cd9b658fb4b8e8fb4e72e52a9f74"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_YEAH/mix.wav",
+    "bytes": 584078,
+    "sha256": "ad2712ddbe10a4bdb2ff360b8d7e4edac9252a47b935154a09317adab77cef78"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZG_YEAH/spec.json",
+    "bytes": 2693,
+    "sha256": "0a8e0df9876e3a7f7eb1ad0d2b2c7d89827b75812dedafe38b02d73f31e5c9ee"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZY_FINAL/drive.wav",
+    "bytes": 584078,
+    "sha256": "819fa0d464dab46b5bea5dc4c4f96c446eec6610455ffeb60abce44561acc55e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZY_FINAL/mix.wav",
+    "bytes": 584078,
+    "sha256": "6864bf430890d4dddd62c359b8318a70e37556f77ec674da01a587e012dddaab"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZY_FINAL/spec.json",
+    "bytes": 2134,
+    "sha256": "c6abeffcf49189254e4413bdb42c1367034aa3a02b3ccaaa1f4b9eaf39d39967"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZY_REACT/drive.wav",
+    "bytes": 992078,
+    "sha256": "9c48a879babbaac3bb7c30f080e58f07d4d1a744847de059334b708aa1857c87"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZY_REACT/mix.wav",
+    "bytes": 992078,
+    "sha256": "ed89e3148cc39eaa7ff3c74140365a974ff20690a2a3ee13153df635e762a32c"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/clips/ZY_REACT/spec.json",
+    "bytes": 2268,
+    "sha256": "bb111ef8a090e87eb00a2937ac7966ebf69351a0bb44fa3179e270a8ad1f6cc3"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/plan.json",
+    "bytes": 45815,
+    "sha256": "4f92b4c22cca8c1e5f0ed8681bc8a68e9a8d4fd7ae3f0c6491c94fbadfcd2979"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/protected-files.sha256.json",
+    "bytes": 17531,
+    "sha256": "9aed3ad9ba0d0b6663c1772dda39945653e5fd93cd76101e78fd6034e9af900c"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/reference-review.json",
+    "bytes": 2002,
+    "sha256": "682512bdc31c350fcb4f0647e2b7d594a4b8dc6ee3f24fedf8c5811b44689d06"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/faceoff.png",
+    "bytes": 2500159,
+    "sha256": "ec47b4b86481b5790dec108b7beed42c1b6c7dc637ed02f45d71369a789397c3"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/fan_ecu.png",
+    "bytes": 2374150,
+    "sha256": "1fd613cbc1eb54d9f2cbabe30834f4e0e6abcfbd61980cca18660056250cedff"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/ring_wide.png",
+    "bytes": 2345312,
+    "sha256": "d5a8a3ea6cd64a52ddac8bf25536b99c9d3d60f966d264f63e6eccd64c7a3438"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/stage_reverse.png",
+    "bytes": 2447888,
+    "sha256": "c6be61ea739603d498ec77925ee9791ae01428df7d11e7553bf454cbf7c8186e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/wide_back.png",
+    "bytes": 2110030,
+    "sha256": "3343e1729a4b8b89fd74e92548a81287a6b3f9b88c518840dac31d19c551fb59"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/zg_cu.png",
+    "bytes": 2155460,
+    "sha256": "1117a35d92fd2325e65dc7551b7beac98e9beefa93186b0be33e1cd7ac1343a4"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/zg_ecu.png",
+    "bytes": 2263978,
+    "sha256": "18a7907e991befaa25d8a048d66370acefff448f9b8bc03dbc0bf5e604c9f1c4"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/zg_low.png",
+    "bytes": 2235241,
+    "sha256": "5bfc9c4353a8ad4e92596b3f2f270be515cc062e546127d346b85b93726ddd8a"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/zg_pov.png",
+    "bytes": 2326103,
+    "sha256": "197b84ad573626ceac3ac8e4fe8fde270eb704118abc658388d55465a4eb6252"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/zy_cu_react.png",
+    "bytes": 2189169,
+    "sha256": "6ec1dbebde11d3a0de56378f9e0a10989317e5edb7f4ce518d449a9c5896d86f"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/refs/zy_low.png",
+    "bytes": 2203654,
+    "sha256": "fbc2f0622d16caf4faa363a68ed1c93cfa379e40d245c687991285265fedad2c"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/导演修改方案.md",
+    "bytes": 13578,
+    "sha256": "a95c2b69160465afb3ba6cab22d596f4e3ecc0a3e76cccf522412e76920a6f1e"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/执行进度.md",
+    "bytes": 1132,
+    "sha256": "0112ed9491c553e7799a64faaa9e26a0edeb9edd044fdf028dee9a5519716777"
+  },
+  {
+    "path": "episodes/suno-chibi/mv-v3/补图提示词.md",
+    "bytes": 8157,
+    "sha256": "631c73f08b7baea1ee5e6c358eef1a83ee837aba12661e6e24ff0ba17a9cab57"
+  },
+  {
     "path": "episodes/suno-chibi/rap-asr.json",
     "bytes": 8208,
     "sha256": "bb09ae42b44d8b66f7bc2428344c02fd01b3d9ca6e5889a406b017920fa85861"
@@ -768,11 +1163,6 @@
     "path": "provenance.json",
     "bytes": 539,
     "sha256": "ef2cfa6dd0b12198478cb04aa11279c0d2d6f9028abf9e405f74f5ab90d15020"
-  },
-  {
-    "path": "README.md",
-    "bytes": 4919,
-    "sha256": "ec3185e7b80719cd841d714aa54d4676fec49de58351dca1a17167743279f4d8"
   },
   {
     "path": "reference/lyrics-guide.md",
@@ -813,6 +1203,11 @@
     "path": "scripts/render.py",
     "bytes": 5312,
     "sha256": "c61fa86e55368405114a875c9fdddea339227c5fb08e6342e750eca8d7e5dd02"
+  },
+  {
+    "path": "scripts/v3.py",
+    "bytes": 16922,
+    "sha256": "8d4ed3a96b8506ad9bbc7cbf50dc04500a9978ee11699f47b75df3d4e96b2d9b"
   },
   {
     "path": "workflows/h3-base.api.json",

@@ -1,0 +1,15 @@
+{
+  "frames": 73,
+  "size": [
+    1216,
+    672
+  ],
+  "fps": 24,
+  "decode": "passed",
+  "mix_audio_correlation": 0.9952379893113981,
+  "protected_files_unchanged": 149,
+  "visual_review": "Low angle and hand gestures present. Opening mouth is not fully closed. Lip sync and timing await user playback acceptance.",
+  "take": 1,
+  "accepted": true,
+  "acceptance": "User approved playback and remaining batch 2026-10-16"
+}

@@ -30,17 +30,52 @@ def nframes(path):
                                    '-show_entries', 'stream=nb_read_frames', '-of', 'csv=p=0', str(path)])
     return int(out.strip())
 
+
+def validate_plan(ids=()):
+    assert (FPS, W, H) == (24, 1216, 672), 'Locked FPS/resolution changed'
+    expected = {
+        'unet': 'minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors',
+        'loras': [['minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors', 1.0],
+                  ['h3-realism-people-t2v-i2v-r2v.safetensors', 1.0]],
+        'steps': 8, 'sampler': 'res_multistep', 'scheduler': 'simple', 'size': [1216, 672]}
+    assert plan['locked_settings'] == expected, 'Locked model settings changed'
+    assert len(CLIPS) == len(plan['clips']), 'Duplicate clip ID'
+    assert not (set(ids) - set(CLIPS)), 'Unknown clip IDs: ' + str(set(ids) - set(CLIPS))
+    cursor = 0
+    for t in plan['timeline']:
+        assert t['clip'] in CLIPS and t['frames'] > 0 and t['in_frame'] >= 0, t['cut']
+        assert t['timeline_start_frame'] == cursor, 'Timeline gap/overlap at ' + t['cut']
+        c = CLIPS[t['clip']]
+        available = c['generation_frames'] if c['status'] == 'new' else nframes(V2 / c['reuse_from'] / 'video.mp4')
+        assert t['in_frame'] + t['frames'] <= available, 'Source too short: ' + t['cut']
+        cursor += t['frames']
+    assert cursor == plan['total_frames'] == 1016, 'Incorrect total frames'
+    for c in plan['clips']:
+        if c['status'] == 'new':
+            assert c['drive'] in ['vocals', 'silence']
+            assert 0 < c['source_end_frame'] - c['source_start_frame'] <= c['generation_frames'] - c['lead_frames']
+            assert (c['generation_frames'] - 5) % 17 == 0, c['id']
+
+def take_count(d):
+    import re
+    nums = [int(m.group(1)) for f in (d / 'takes').glob('*_take*.*')
+            if (m := re.search(r'_take([0-9]+)', f.name))]
+    return max(nums, default=0)
+
 # ---------------- check ----------------
 def check():
+    validate_plan()
     missing = sorted({c['reference'] for c in plan['clips'] if c['status'] == 'new' and not ref_path(c['reference'])})
     print('缺参考图（放进 episodes/suno-chibi/mv-v3/refs/）:', missing or '无')
     for c in plan['clips']:
         v = C / c['id'] / 'video.mp4'
         print(f"{c['id']:9s} {c['status']:6s} ref={c.get('reference', c.get('reuse_from')):14s} video={'有' if v.exists() else '—'}")
     print('timeline 总帧数', sum(t['frames'] for t in plan['timeline']), '/ 应为', plan['total_frames'])
+    if missing: raise SystemExit(1)
 
 # ---------------- prepare ----------------
 def prepare(ids):
+    validate_plan(ids)
     for c in plan['clips']:
         if ids and c['id'] not in ids: continue
         d = C / c['id']; d.mkdir(parents=True, exist_ok=True)
@@ -74,6 +109,8 @@ def upload(path):
     return q['subfolder'] + '/' + q['name']
 
 def run(ids, retake):
+    validate_plan(ids)
+    assert not retake or len(ids) == 1, "Retake requires exactly one explicit clip ID"
     order = [c for c in plan['clips'] if c['status'] == 'new']
     for idx, c in enumerate(order):
         sid = c['id']
@@ -81,13 +118,23 @@ def run(ids, retake):
         d = C / sid
         assert (d / 'drive.wav').exists(), f'先运行 prepare（{sid} 缺 drive.wav）'
         takes = d / 'takes'
-        if retake and (d / 'video.mp4').exists():
-            takes.mkdir(exist_ok=True); k = len(list(takes.glob('video_take*.mp4'))) + 1
-            (d / 'video.mp4').rename(takes / f'video_take{k}.mp4')
-            for f in ['task.json', 'history.json']:
-                if (d / f).exists(): (d / f).rename(takes / f'{f[:-5]}_take{k}.json')
+        if retake:
+            q = req('/queue')
+            assert not q['queue_running'] and not q['queue_pending'], 'Queue occupied: do not archive active take'
+            if (d / 'task.json').exists():
+                pending = json.loads((d / 'task.json').read_text())['prompt_id']
+                h = req('/history/' + pending)
+                assert pending in h, 'Unresolved task retained; collect before retaking'
+                assert h[pending].get('status', {}).get('status_str') != 'success' or (d / 'video.mp4').exists(), 'Collect successful task before retaking'
+            k = take_count(d) + 1
+            assert k < 3, 'Maximum three takes reached; use director fallback with user decision'
+            assert (d / 'request.json').exists(), 'No submitted take to archive'
+            takes.mkdir(exist_ok=True)
+            for name in ['video.mp4', 'task.json', 'completed-task.json', 'history.json', 'request.json', 'preview.jpg']:
+                f = d / name
+                if f.exists(): f.rename(takes / (f.stem + '_take' + str(k) + f.suffix))
         if (d / 'video.mp4').exists(): print('EXISTS', sid, flush=True); continue
-        take = len(list(takes.glob('video_take*.mp4'))) if takes.exists() else 0
+        take = take_count(d)
         if (d / 'task.json').exists():
             tid = json.loads((d / 'task.json').read_text())['prompt_id']
         else:
@@ -99,7 +146,8 @@ def run(ids, retake):
             g['30'] = {'class_type': 'LoraLoaderModelOnly', 'inputs': {'model': ['1', 0], 'lora_name': 'minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors', 'strength_model': 1.0}}
             g['31'] = {'class_type': 'LoraLoaderModelOnly', 'inputs': {'model': ['30', 0], 'lora_name': 'h3-realism-people-t2v-i2v-r2v.safetensors', 'strength_model': 1.0}}
             g['13']['inputs']['model'] = ['31', 0]
-            g['16']['inputs'].update(model=['31', 0], steps=8)
+            g['16']['inputs'].update(model=['31', 0], steps=8, scheduler='simple')
+            g['15']['inputs']['sampler_name'] = 'res_multistep'
             g['10']['inputs']['image'] = upload(ref)
             g['11']['inputs']['audio'] = upload(d / 'drive.wav')
             g['21']['inputs']['audio'] = upload(d / 'mix.wav')
@@ -123,6 +171,7 @@ def run(ids, retake):
                                 url = BASE + '/view?' + urllib.parse.urlencode({k: f[k] for k in ['filename', 'subfolder', 'type']})
                                 (d / 'video.mp4').write_bytes(urllib.request.urlopen(url, timeout=120).read())
                 assert (d / 'video.mp4').exists(), 'No video returned'
+                shutil.copy2(d / 'task.json', d / 'completed-task.json')
                 (d / 'task.json').unlink()
                 ff(['-ss', '1', '-i', d / 'video.mp4', '-frames:v', '1', d / 'preview.jpg'])
                 print('DONE', sid, 'wait_seconds', round(time.time() - start, 1), flush=True); break
@@ -156,6 +205,10 @@ def overlay(t, path):
     im.save(path)
 
 def render():
+    validate_plan()
+    for t in plan['timeline']:
+        v = C / t['clip'] / 'video.mp4'
+        assert v.exists() and nframes(v) >= t['in_frame'] + t['frames'], 'Missing/short clip: ' + t['clip']
     out_dir = V / 'render'; out_dir.mkdir(exist_ok=True)
     for t in plan['timeline']:
         v = C / t['clip'] / 'video.mp4'; assert v.exists(), f"缺 {t['clip']}/video.mp4"
@@ -172,7 +225,23 @@ def render():
     ff(['-f', 'concat', '-safe', '0', '-i', out_dir / 'concat.txt', '-i', P / 'song.wav', '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy',
         '-af', 'apad', '-t', total / FPS, '-c:a', 'aac', '-b:a', '320k', '-movflags', '+faststart', final])
     # 审片用：每 1/3 秒一帧带时间码的总览
-    ff(['-i', final, '-vf', "fps=1,scale=380:-1,tile=6x8", '-frames:v', '1', V / '成片总览-v3.jpg'])
+    ff(['-i', final, '-vf', "fps=3,scale=304:168,tile=8x16", '-frames:v', '1', V / '成片总览-v3.jpg'])
+    from PIL import Image, ImageDraw
+    sheet_path = V / '成片总览-v3.jpg'
+    sheet = Image.open(sheet_path); draw = ImageDraw.Draw(sheet)
+    for i in range((total + 7) // 8):
+        x, y = (i % 8) * 304, (i // 8) * 168
+        draw.rectangle((x, y, x + 82, y + 22), fill='black')
+        draw.text((x + 3, y + 2), f'{i / 3:.2f}s', font=font(14), fill='white')
+    sheet.save(sheet_path)
+    ff(['-i', final, '-f', 'null', '-'])
+    info = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(final)]))
+    video = next(x for x in info['streams'] if x['codec_type'] == 'video')
+    assert int(video['nb_frames']) == total and (video['width'], video['height']) == (W, H)
+    report = {'file': str(final.relative_to(R)), 'frames': total, 'duration': info['format']['duration'],
+              'decode': 'passed', 'perceptual_lip_sync': 'requires audio/video playback acceptance',
+              'takes': {c['id']: (take_count(C / c['id']) + 1 if c['status'] == 'new' else 'v2 reuse') for c in plan['clips']}}
+    (V / 'validation.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     print('FINAL', final, 'frames', total, flush=True)
 
 if __name__ == '__main__':
