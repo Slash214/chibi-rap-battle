@@ -1,0 +1,110 @@
+[
+  {
+    "clip": "A01",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "A03",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "END02B",
+    "frames": 124,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "OPEN3",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "A02",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "ZG_R1",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "A04",
+    "frames": 90,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "RING",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "ZY_REACT",
+    "frames": 124,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "ZG_YEAH",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "B02",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "B03",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "ZY_FINAL",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "CHAMP",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "ZG_R2",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "FAN",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "B04",
+    "frames": 90,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  },
+  {
+    "clip": "B01",
+    "frames": 73,
+    "decode": "passed",
+    "review": "requires visual and audio playback review"
+  }
+]

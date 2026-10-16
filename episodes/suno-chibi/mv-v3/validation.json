@@ -1,0 +1,42 @@
+{
+  "file": "episodes\\suno-chibi\\赤壁借风-周瑜对诸葛亮-成片-v3.mp4",
+  "frames": 1016,
+  "duration": "42.333333",
+  "decode": "passed",
+  "perceptual_lip_sync": "requires audio/video playback acceptance",
+  "takes": {
+    "OPEN3": 1,
+    "A01": 1,
+    "A02": 1,
+    "ZG_R1": 1,
+    "A03": "v2 reuse",
+    "A04": 1,
+    "ZG_R2": 2,
+    "RING": 1,
+    "FAN": 3,
+    "ZY_REACT": 1,
+    "ZG_YEAH": 1,
+    "B01": 3,
+    "B02": 1,
+    "B03": 1,
+    "B04": 3,
+    "ZY_FINAL": 1,
+    "CHAMP": 1,
+    "END02B": "v2 reuse"
+  },
+  "original_song_correlation": 0.9997730575921141,
+  "protected_files_unchanged": 149,
+  "bytes": 27163933,
+  "sha256": "0bc8f19c01353b2790af84c812f11cc5a198be0b5da7e6464a0fdaccc621bf8c",
+  "edit_trims": {
+    "C07": {
+      "in_frame": 12,
+      "reason": "Use later look-down-to-smile response in take 2"
+    },
+    "C09": {
+      "in_frame": 12,
+      "reason": "Skip empty bokeh lead-in; show feather fan from entrance through sweep"
+    }
+  },
+  "overall_creator_acceptance": "pending full-film playback; A01 accepted"
+}

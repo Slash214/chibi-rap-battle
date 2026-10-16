@@ -94,10 +94,26 @@ def prepare(ids):
         ff(['-ss', ss, '-t', dur, '-i', P / 'song.wav', '-af', af, '-t', total, '-ar', '48000', d / 'mix.wav'])
         print('PREPARED', c['id'], c['drive'], flush=True)
 
+
+def execution_prompt(c):
+    import hashlib
+    path = V / 'execution-prompt-overrides.json'
+    overrides = json.loads(path.read_text(encoding='utf-8')) if path.exists() else {}
+    if c['id'] not in overrides: return c['prompt']
+    o = overrides[c['id']]
+    assert hashlib.sha256(c['prompt'].encode()).hexdigest() == o['source_prompt_sha256'], 'Override source changed'
+    return o['prompt']
+
 # ---------------- run ----------------
 def req(path, data=None):
     b = json.dumps(data).encode() if data is not None else None
-    return json.load(urllib.request.urlopen(urllib.request.Request(BASE + path, data=b, headers={'Content-Type': 'application/json'}), timeout=120))
+    for attempt in range(4):
+        try:
+            return json.load(urllib.request.urlopen(urllib.request.Request(BASE + path, data=b, headers={'Content-Type': 'application/json'}), timeout=120))
+        except (urllib.error.URLError, TimeoutError):
+            if data is not None or attempt == 3: raise
+            print('RETRY_READ', path, attempt + 1, flush=True)
+            time.sleep(5)
 
 def upload(path):
     boundary = uuid.uuid4().hex
@@ -120,7 +136,11 @@ def run(ids, retake):
         takes = d / 'takes'
         if retake:
             q = req('/queue')
-            assert not q['queue_running'] and not q['queue_pending'], 'Queue occupied: do not archive active take'
+            active_ids = {x[1] for x in q['queue_running'] + q['queue_pending']}
+            for task_file in [d / 'task.json', d / 'completed-task.json']:
+                if task_file.exists():
+                    own_id = json.loads(task_file.read_text())['prompt_id']
+                    assert own_id not in active_ids, 'Do not archive active take'
             if (d / 'task.json').exists():
                 pending = json.loads((d / 'task.json').read_text())['prompt_id']
                 h = req('/history/' + pending)
@@ -140,7 +160,9 @@ def run(ids, retake):
         else:
             assert not (V / 'PAUSED.txt').exists(), 'mv-v3/PAUSED.txt 存在：等待用户确认'
             ref = ref_path(c['reference']); assert ref, f'缺参考图 {c["reference"]}.png'
-            q = req('/queue'); assert not q['queue_running'] and not q['queue_pending'], 'GPU 队列被占用，稍后再试'
+            q = req('/queue')
+            if q['queue_running'] or q['queue_pending']:
+                print('QUEUED_BEHIND', sid, len(q['queue_running']) + len(q['queue_pending']), flush=True)
             g = json.loads((R / 'workflows/h3-base.api.json').read_text(encoding='utf-8'))
             g['1']['inputs']['unet_name'] = 'minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors'
             g['30'] = {'class_type': 'LoraLoaderModelOnly', 'inputs': {'model': ['1', 0], 'lora_name': 'minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors', 'strength_model': 1.0}}
@@ -151,7 +173,7 @@ def run(ids, retake):
             g['10']['inputs']['image'] = upload(ref)
             g['11']['inputs']['audio'] = upload(d / 'drive.wav')
             g['21']['inputs']['audio'] = upload(d / 'mix.wav')
-            g['12']['inputs'].update(width=W, height=H, length=c['generation_frames'], prompt=c['prompt'])
+            g['12']['inputs'].update(width=W, height=H, length=c['generation_frames'], prompt=execution_prompt(c))
             g['14']['inputs']['noise_seed'] = 20261116 + idx + 1000 * take
             g['20']['inputs']['filename_prefix'] = 'ancient-rap-battle/suno-chibi/mv-v3/' + sid
             (d / 'request.json').write_text(json.dumps(g, ensure_ascii=False, indent=2), encoding='utf-8')
@@ -205,6 +227,12 @@ def overlay(t, path):
     im.save(path)
 
 def render():
+    trims_path = V / 'edit-trims.json'
+    trims = json.loads(trims_path.read_text()) if trims_path.exists() else {}
+    for t in plan['timeline']:
+        if t['cut'] in trims:
+            assert CLIPS[t['clip']].get('drive') == 'silence', 'Do not shift vocal sync'
+            t['in_frame'] = trims[t['cut']]['in_frame']
     validate_plan()
     for t in plan['timeline']:
         v = C / t['clip'] / 'video.mp4'

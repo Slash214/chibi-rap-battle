@@ -1,0 +1,227 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "MiniMax H3 UNET"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIP (minimax / Qwen3-VL)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Video VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Audio VAE"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "ancient-rap-battle/suno-chibi-v3/reverse.png"
+    }
+  },
+  "11": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "ancient-rap-battle/suno-chibi-v3/drive (7).wav"
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3AudioConditioningT8",
+    "inputs": {
+      "width": 1216,
+      "height": 672,
+      "length": 73,
+      "task_type": "Ref2VA",
+      "audio_mode": "lock_source",
+      "audio_denoise_strength": 0.35,
+      "add_source_as_reference": true,
+      "prompt_primary_audio_ordinal": 1,
+      "strict_prompt_tags": true,
+      "ref_image_size": "match",
+      "reference_video_policy": "official_2_to_15s",
+      "clip": [
+        "2",
+        0
+      ],
+      "video_vae": [
+        "3",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nWaist-up reverse two shot: Zhuge Liang at screen LEFT raps toward Zhou Yu at screen RIGHT. On 借我的风 he gives one big sweeping wave of the white feather fan toward Zhou Yu at waist-to-chest height; a visible gust blows Zhou Yu's loose hair strands and crimson cloak backward, Zhou Yu squints and leans back slightly with lips closed. The fan never crosses Zhuge Liang's mouth.\nZhuge Liang alone raps exactly <d>[Chinese] 你点那把火，得借我的风</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux.",
+      "drive_audio": [
+        "11",
+        0
+      ],
+      "final_audio": [
+        "21",
+        0
+      ],
+      "ref_images.ref_image_0": [
+        "10",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "31",
+        0
+      ],
+      "conditioning": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 20262126
+    }
+  },
+  "15": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "16": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "31",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1.0
+    }
+  },
+  "17": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "15",
+        0
+      ],
+      "sigmas": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "12",
+        1
+      ]
+    }
+  },
+  "18": {
+    "class_type": "MiniMaxH3AVDecodeT8",
+    "inputs": {
+      "av_latent": [
+        "17",
+        0
+      ],
+      "video_vae": [
+        "3",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "19": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "18",
+        0
+      ],
+      "fps": 24.0,
+      "audio": [
+        "12",
+        2
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "19",
+        0
+      ],
+      "filename_prefix": "ancient-rap-battle/suno-chibi/mv-v3/B01",
+      "format": "auto",
+      "format.codec": "auto"
+    }
+  },
+  "21": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "ancient-rap-battle/suno-chibi-v3/mix (10).wav"
+    }
+  },
+  "30": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "31": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+      "strength_model": 1.0
+    }
+  }
+}

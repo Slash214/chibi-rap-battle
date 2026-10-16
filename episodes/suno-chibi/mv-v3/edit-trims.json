@@ -1,0 +1,10 @@
+{
+  "C07": {
+    "in_frame": 12,
+    "reason": "Use later look-down-to-smile response in take 2"
+  },
+  "C09": {
+    "in_frame": 12,
+    "reason": "Skip empty bokeh lead-in; show feather fan from entrance through sweep"
+  }
+}

@@ -81,3 +81,9 @@ prepare 只按现有 plan.json 重建音频片段；run 才提交视频任务。
 借鉴 https://github.com/10291124jcjc-dotcom/ancient-rap-battle 的制作流程和分镜规则。
 原仓库基线 e5e40fa3612777133a141c8448122dd0fd45e4cc，原代码许可保留于 reference/upstream-LICENSE。
 该许可不替代 Suno 音频、生成素材的各自使用条款。
+
+## v3 完整视频
+
+[播放/下载 v3](episodes/suno-chibi/赤壁借风-周瑜对诸葛亮-成片-v3.mp4) · [逐镜检查与已知差异](episodes/suno-chibi/mv-v3/交付验收.md) · [剪辑单](episodes/suno-chibi/mv-v3/剪辑单.md)
+
+42.33 秒，1216×672，24fps，8 步，原 Suno 音轨。技术检查通过；完整口型观感待创作者验收。

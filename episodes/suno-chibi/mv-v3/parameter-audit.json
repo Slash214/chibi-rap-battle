@@ -1,0 +1,28 @@
+{
+  "submitted_requests_verified": [
+    "OPEN3",
+    "A01",
+    "A02",
+    "ZG_R1",
+    "A04",
+    "ZG_R2",
+    "RING",
+    "FAN",
+    "ZY_REACT",
+    "ZG_YEAH",
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "ZY_FINAL",
+    "CHAMP"
+  ],
+  "size": [
+    1216,
+    672
+  ],
+  "steps": 8,
+  "sampler": "res_multistep",
+  "source_prompts": "plan plus source-hash-bound FAN/B04 conflict corrections",
+  "silence_drives": "exact zero verified"
+}

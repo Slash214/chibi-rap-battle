@@ -1,0 +1,18 @@
+{
+  "A01": "User approved take 1 playback",
+  "OPEN3": "Push from audience to stage and raised fist visible; lip sync pending final playback",
+  "A02": "Hand waves visible; mimic-fan motion less specific than director intent",
+  "ZG_R1": "Gaze and smile change visible; lips closed in sampled frames",
+  "A04": "Pointing at fan then fist approach and push-in visible",
+  "ZG_R2": "Retake: look-down holds too long; upward response absent within cut",
+  "RING": "Both full bodies moving, sideways parallax visible",
+  "FAN": "Retake: frame is too wide, faces visible instead of fan-only extreme close-up",
+  "A03": "Director-mandated v2 reuse; fan shape differs from new references",
+  "END02B": "Director-mandated v2 reuse; crane/pull-back visible",
+  "ZY_REACT": "Beckoning and later smile fading visible; jaw clench weak; ceiling lights differ from reference",
+  "ZG_YEAH": "Low angle, raised microphone and mouth movement visible; lip sync pending playback",
+  "B01": "Retake: fan directed at opponent and hair motion visible but backward lean insufficient",
+  "B02": "Fan raised to temple within first half; step-aside less distinct",
+  "B03": "Frontal POV and push-in visible; boat-like flat fan not clear",
+  "B04": "Retake: early frames introduce an incorrect Zhou Yu identity and costume"
+}
