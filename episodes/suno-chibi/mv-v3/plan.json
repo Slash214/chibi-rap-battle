@@ -1,0 +1,408 @@
+{
+  "version": "mv-v3",
+  "source": "episodes/suno-chibi/赤壁借风.m4a",
+  "fps": 24,
+  "width": 1216,
+  "height": 672,
+  "total_frames": 1016,
+  "locked_settings": {
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      [
+        "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        1.0
+      ],
+      [
+        "h3-realism-people-t2v-i2v-r2v.safetensors",
+        1.0
+      ]
+    ],
+    "steps": 8,
+    "sampler": "res_multistep",
+    "scheduler": "simple",
+    "size": [
+      1216,
+      672
+    ]
+  },
+  "clips": [
+    {
+      "id": "OPEN3",
+      "status": "new",
+      "reference": "wide_back",
+      "drive": "vocals",
+      "source_start_frame": 0,
+      "source_end_frame": 60,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nStart in a WIDE shot from behind standing spectators whose raised hands and dark silhouettes frame the bright circular stage. The camera makes a fast, decisive forward dolly through the gap between their raised arms toward the stage, ending in a medium-wide shot: Zhou Yu at screen LEFT, Zhuge Liang at screen RIGHT. Zhou Yu pumps his free left fist upward on each beat while hyping the crowd into the microphone; the spectators raise their hands in response. Zhuge Liang stands still, lips closed, fan low, watching with a faint smile.\nZhou Yu alone raps exactly <d>[English] Yeah, yeah, yeah</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "A01",
+      "status": "new",
+      "reference": "zy_low",
+      "drive": "vocals",
+      "source_start_frame": 60,
+      "source_end_frame": 118,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nLOW-ANGLE close-up on Zhou Yu: camera at chest height looking up, red lanterns and dark roof beams above his head, spotlight rim on his crown. Short assertive handheld push-in. On 火 his free left hand rises beside his shoulder and bursts open, fingers spread like a flame; on 光 he taps his own chest with his left thumb, proud and aggressive, eyes locked toward screen right where his opponent stands offscreen. No fan and no other person inside the frame.\nZhou Yu alone raps exactly <d>[Chinese] 赤壁这把火，是我点的光</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "A02",
+      "status": "new",
+      "reference": "master",
+      "drive": "vocals",
+      "source_start_frame": 118,
+      "source_end_frame": 179,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nWaist-up two shot, Zhou Yu at screen LEFT, Zhuge Liang at screen RIGHT. Slight handheld drift toward Zhou Yu. During the first half of the line Zhou Yu MOCKS his opponent: his free left hand flaps twice in front of his own chest like a lazy fan, with an exaggerated bored face, then sweeps toward the center of the stage. Zhuge Liang listens, lips closed, fan still at waist.\nZhou Yu alone raps exactly <d>[Chinese] 你摇两下扇，就想站中央</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "ZG_R1",
+      "status": "new",
+      "reference": "zg_cu",
+      "drive": "silence",
+      "source_start_frame": 148,
+      "source_end_frame": 179,
+      "lead_frames": 0,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nClose-up reaction of Zhuge Liang facing three-quarter toward screen LEFT, the blurred crimson shoulder of Zhou Yu at the left edge of frame. Tiny handheld push-in. He stops his fan mid-air at chest height, raises one eyebrow and lets a slow amused half-smile appear, lips closed.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "A03",
+      "status": "reuse",
+      "reuse_from": "A03"
+    },
+    {
+      "id": "A04",
+      "status": "new",
+      "reference": "faceoff",
+      "drive": "vocals",
+      "source_start_frame": 240,
+      "source_end_frame": 316,
+      "lead_frames": 6,
+      "generation_frames": 90,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nTight LOW-ANGLE face-off two shot: Zhou Yu at screen LEFT leans in, the two faces only half a meter apart; Zhuge Liang at screen RIGHT in three-quarter back view, hat and cheek sharp. The camera pushes in fast from medium to close as Zhou Yu escalates. On 收起扇 he points down at the feather fan with his free left index finger; on 打一场 he thrusts his free left fist toward Zhuge Liang's chest and stops short with no contact. Zhuge Liang does not step back, lips closed.\nZhou Yu alone raps exactly <d>[Chinese] 有胆收起扇，跟我打一场</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "ZG_R2",
+      "status": "new",
+      "reference": "zg_cu",
+      "drive": "silence",
+      "source_start_frame": 316,
+      "source_end_frame": 362,
+      "lead_frames": 0,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nClose-up reaction of Zhuge Liang facing three-quarter toward screen LEFT, Zhou Yu's blurred crimson armor very close at the left edge. One second of calm unblinking stare, then he slowly lowers his gaze to Zhou Yu's fist, looks back up and gives a small serene smile, lips closed. The white feather fan rises gently once at chest level, never in front of his mouth.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "RING",
+      "status": "new",
+      "reference": "ring_wide",
+      "drive": "silence",
+      "source_start_frame": 362,
+      "source_end_frame": 424,
+      "lead_frames": 0,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nWide side view of the circular battle floor at stage height, both men full body: Zhou Yu at screen LEFT, Zhuge Liang at screen RIGHT. They slowly circle each other like two fighters across the ring, Zhou Yu bouncing on the beat with his microphone lowered, Zhuge Liang walking calmly with the fan at his waist. The camera dollies sideways in the opposite direction for strong parallax. Standing spectators at the ring edge sway and raise hands; nobody enters the circle.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "FAN",
+      "status": "new",
+      "reference": "fan_ecu",
+      "drive": "silence",
+      "source_start_frame": 424,
+      "source_end_frame": 455,
+      "lead_frames": 0,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nExtreme close-up insert of the rigid white feather fan held in Zhuge Liang's LEFT hand at chest level: one slow graceful sweep through the smoky spotlight beam, individual white feathers catching rim light, ivory sleeve edge and bronze fan handle visible. Shallow depth of field, red lanterns as warm bokeh. No faces in frame.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "ZY_REACT",
+      "status": "new",
+      "reference": "zy_cu_react",
+      "drive": "silence",
+      "source_start_frame": 455,
+      "source_end_frame": 545,
+      "lead_frames": 0,
+      "generation_frames": 124,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nClose-up of Zhou Yu facing three-quarter toward screen LEFT, the blurred ivory sleeve of Zhuge Liang at the left edge. One continuous acting beat: for the first two seconds a cocky smirk, chin up, he beckons twice with the fingers of his free left hand as if saying \"bring it\"; then his smile slowly fades; in the final two seconds his jaw tightens, eyes narrow, a small irritated exhale through the nose. Lips closed throughout.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "ZG_YEAH",
+      "status": "new",
+      "reference": "zg_low",
+      "drive": "vocals",
+      "source_start_frame": 482,
+      "source_end_frame": 545,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nLOW-ANGLE medium shot of Zhuge Liang facing three-quarter toward screen RIGHT, spectators behind him raising their hands, lanterns above. The camera slowly rises and pushes in. He lifts the black microphone from chest level to just below his mouth and voices the hype adlibs into it, nodding on the beat with a knowing smile; the fan in his left hand sways once at waist height.\nZhuge Liang alone raps exactly <d>[English] Yeah, yeah, yeah, yeah</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "B01",
+      "status": "new",
+      "reference": "reverse",
+      "drive": "vocals",
+      "source_start_frame": 545,
+      "source_end_frame": 609,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nWaist-up reverse two shot: Zhuge Liang at screen LEFT raps toward Zhou Yu at screen RIGHT. On 借我的风 he gives one big sweeping wave of the white feather fan toward Zhou Yu at waist-to-chest height; a visible gust blows Zhou Yu's loose hair strands and crimson cloak backward, Zhou Yu squints and leans back slightly with lips closed. The fan never crosses Zhuge Liang's mouth.\nZhuge Liang alone raps exactly <d>[Chinese] 你点那把火，得借我的风</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "B02",
+      "status": "new",
+      "reference": "zhuge",
+      "drive": "vocals",
+      "source_start_frame": 609,
+      "source_end_frame": 670,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nOver-the-shoulder from behind Zhou Yu's blurred crimson armored shoulder at screen right; Zhuge Liang waist-up, three-quarter toward screen RIGHT. While rapping 我不站中央 he strolls one step sideways away from the center and the camera arcs with him; on 照样 he lightly taps the bronze handle of the fan against his own temple, the fan held up beside his head, mouth fully visible.\nZhuge Liang alone raps exactly <d>[Chinese] 我不站中央，照样算得通</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "B03",
+      "status": "new",
+      "reference": "zg_pov",
+      "drive": "vocals",
+      "source_start_frame": 670,
+      "source_end_frame": 728,
+      "lead_frames": 6,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nPoint-of-view shot from Zhou Yu's eye line: Zhuge Liang in a frontal medium close-up raps straight INTO THE LENS as if to his opponent. Fast push-in. On 草船借来箭 he tilts the fan flat at waist height like a small boat; on 回敬你威风 he points the fan tip straight at the lens, below his chin, mouth clear.\nZhuge Liang alone raps exactly <d>[Chinese] 草船借来箭，回敬你威风</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "B04",
+      "status": "new",
+      "reference": "zg_ecu",
+      "drive": "vocals",
+      "source_start_frame": 728,
+      "source_end_frame": 798,
+      "lead_frames": 6,
+      "generation_frames": 90,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nSlow continuous push from a close-up into an extreme close-up of Zhuge Liang's face, three-quarter toward screen RIGHT. At the bottom edge of frame the white feather fan waves softly twice at chest level on 扇子轻轻摇. On 你先急着冲 his eyes cut sideways toward his opponent with a sly half smile. After the vocal ends he stops, lips closed, and holds the smile.\nZhuge Liang alone raps exactly <d>[Chinese] 扇子轻轻摇，你先急着冲</d> following the rhythm, consonants, vowels and pauses of <Audio 1>. Start after the opening 0.25 seconds of silence. The other man keeps lips closed. Stop mouth articulation when the vocal ends; no invented syllables.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan, never in front of his mouth. Natural rapid rap articulation, head nods and shoulder drive on the beat, eyes locked on the opponent. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "ZY_FINAL",
+      "status": "new",
+      "reference": "reverse",
+      "drive": "silence",
+      "source_start_frame": 798,
+      "source_end_frame": 851,
+      "lead_frames": 0,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nReverse two shot: Zhuge Liang at screen LEFT smiling calmly, Zhou Yu at screen RIGHT. Zhou Yu snaps his microphone up to answer back, freezes with lips closed, then lowers it, shakes his head and breaks into a reluctant grin, pointing at Zhuge Liang with his free left hand as if to say \"you got me\".\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "CHAMP",
+      "status": "new",
+      "reference": "stage_reverse",
+      "drive": "silence",
+      "source_start_frame": 851,
+      "source_end_frame": 912,
+      "lead_frames": 0,
+      "generation_frames": 73,
+      "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, hard overhead spotlight and light haze on the circular battle floor, audience kept outside the circle.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>. Keep the camera framing, angle and lens character of <Picture 1> as the starting composition.\ndetailed_description:\nReverse wide from ON the stage behind the two men looking out at the audience: the whole crowd jumps up cheering with fists raised. Zhuge Liang at center raises the white feather fan high in his LEFT hand and the microphone in his RIGHT like a champion; Zhou Yu at the side lowers his head with a grin and claps once against his microphone hand. The camera pushes slowly forward past their shoulders toward the crowd.\nThis is a silent acting / reaction shot, not a lyric. Nobody speaks, raps or mouths words; lips stay closed except for the described smile or grin.\nEach microphone stays in the RIGHT hand. Zhuge Liang's LEFT hand holds the white feather fan. Clear readable facial acting and body language. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is silence. Do not generate speech, lyrics, cheers or dialogue.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+    },
+    {
+      "id": "END02B",
+      "status": "reuse",
+      "reuse_from": "END02B"
+    }
+  ],
+  "timeline": [
+    {
+      "cut": "C01",
+      "clip": "OPEN3",
+      "in_frame": 6,
+      "frames": 60,
+      "lyric": "",
+      "name_card": null,
+      "overlay": "title",
+      "timeline_start_frame": 0
+    },
+    {
+      "cut": "C02",
+      "clip": "A01",
+      "in_frame": 6,
+      "frames": 58,
+      "lyric": "赤壁这把火，是我点的光",
+      "name_card": "周瑜",
+      "overlay": null,
+      "timeline_start_frame": 60
+    },
+    {
+      "cut": "C03",
+      "clip": "A02",
+      "in_frame": 6,
+      "frames": 30,
+      "lyric": "你摇两下扇，就想站中央",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 118
+    },
+    {
+      "cut": "C04",
+      "clip": "ZG_R1",
+      "in_frame": 0,
+      "frames": 31,
+      "lyric": "你摇两下扇，就想站中央",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 148
+    },
+    {
+      "cut": "C05",
+      "clip": "A03",
+      "in_frame": 6,
+      "frames": 61,
+      "lyric": "借箭还借风，名声倒挺响",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 179
+    },
+    {
+      "cut": "C06",
+      "clip": "A04",
+      "in_frame": 6,
+      "frames": 76,
+      "lyric": "有胆收起扇，跟我打一场",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 240
+    },
+    {
+      "cut": "C07",
+      "clip": "ZG_R2",
+      "in_frame": 0,
+      "frames": 46,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 316
+    },
+    {
+      "cut": "C08",
+      "clip": "RING",
+      "in_frame": 0,
+      "frames": 62,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 362
+    },
+    {
+      "cut": "C09",
+      "clip": "FAN",
+      "in_frame": 0,
+      "frames": 31,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 424
+    },
+    {
+      "cut": "C10",
+      "clip": "ZY_REACT",
+      "in_frame": 0,
+      "frames": 27,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 455
+    },
+    {
+      "cut": "C11",
+      "clip": "ZG_YEAH",
+      "in_frame": 6,
+      "frames": 63,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 482
+    },
+    {
+      "cut": "C12",
+      "clip": "B01",
+      "in_frame": 6,
+      "frames": 64,
+      "lyric": "你点那把火，得借我的风",
+      "name_card": "诸葛亮",
+      "overlay": null,
+      "timeline_start_frame": 545
+    },
+    {
+      "cut": "C13",
+      "clip": "B02",
+      "in_frame": 6,
+      "frames": 43,
+      "lyric": "我不站中央，照样算得通",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 609
+    },
+    {
+      "cut": "C14",
+      "clip": "ZY_REACT",
+      "in_frame": 92,
+      "frames": 18,
+      "lyric": "我不站中央，照样算得通",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 652
+    },
+    {
+      "cut": "C15",
+      "clip": "B03",
+      "in_frame": 6,
+      "frames": 58,
+      "lyric": "草船借来箭，回敬你威风",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 670
+    },
+    {
+      "cut": "C16",
+      "clip": "B04",
+      "in_frame": 6,
+      "frames": 70,
+      "lyric": "扇子轻轻摇，你先急着冲",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 728
+    },
+    {
+      "cut": "C17",
+      "clip": "ZY_FINAL",
+      "in_frame": 0,
+      "frames": 53,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 798
+    },
+    {
+      "cut": "C18",
+      "clip": "CHAMP",
+      "in_frame": 0,
+      "frames": 61,
+      "lyric": "",
+      "name_card": null,
+      "overlay": null,
+      "timeline_start_frame": 851
+    },
+    {
+      "cut": "C19",
+      "clip": "END02B",
+      "in_frame": 20,
+      "frames": 104,
+      "lyric": "",
+      "name_card": null,
+      "overlay": "end_title",
+      "timeline_start_frame": 912
+    }
+  ]
+}
