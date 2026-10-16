@@ -1,0 +1,227 @@
+{
+  "1": {
+    "inputs": {
+      "unet_name": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+      "weight_dtype": "default"
+    },
+    "class_type": "UNETLoader",
+    "_meta": {
+      "title": "MiniMax H3 UNET"
+    }
+  },
+  "2": {
+    "inputs": {
+      "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+      "type": "minimax",
+      "device": "default"
+    },
+    "class_type": "CLIPLoader",
+    "_meta": {
+      "title": "CLIP (minimax / Qwen3-VL)"
+    }
+  },
+  "3": {
+    "inputs": {
+      "vae_name": "minimax_h3_video_vae_fp16.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Video VAE"
+    }
+  },
+  "4": {
+    "inputs": {
+      "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+    },
+    "class_type": "VAELoader",
+    "_meta": {
+      "title": "Audio VAE"
+    }
+  },
+  "10": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "ancient-rap-battle/suno-chibi/crowd.png"
+    }
+  },
+  "11": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "ancient-rap-battle/suno-chibi/drive (12).wav"
+    }
+  },
+  "12": {
+    "class_type": "MiniMaxH3AudioConditioningT8",
+    "inputs": {
+      "width": 1216,
+      "height": 672,
+      "length": 124,
+      "task_type": "Ref2VA",
+      "audio_mode": "lock_source",
+      "audio_denoise_strength": 0.35,
+      "add_source_as_reference": true,
+      "prompt_primary_audio_ordinal": 1,
+      "strict_prompt_tags": true,
+      "ref_image_size": "match",
+      "reference_video_policy": "official_2_to_15s",
+      "clip": [
+        "2",
+        0
+      ],
+      "video_vae": [
+        "3",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ],
+      "prompt": "subject_definitions:\n<Subject 1> is Zhou Yu in crimson bronze armor. <Subject 2> is Zhuge Liang in ivory scholar robes, black hat and white feather fan. The two men, audience and hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous CRANE UP AND PULL BACK wide establishing shot of the whole rap battle venue at the end of the music video. Camera movement is the main action.\nretention_analysis:\nPreserve the identities, clothing, black microphones, white FEATHER fan, crowd and architecture of <Picture 1>.\ndetailed_description:\nBegin with a WIDE shot from behind the front row of spectators, both men visible head-to-toe on the circular stage. During the entire shot the camera physically travels backward and rises upward several meters, revealing increasingly more seated audience rows, circular floor and red lantern hall architecture. By the end this is a HIGH ANGLE EXTREME WIDE shot of the entire hall. Both main characters get visibly SMALLER in the frame. Clear perspective parallax as foreground spectators slide down and out of view. This is a real cinematic crane withdrawal, not a stationary two shot or a zoom toward faces. The two rappers remain standing in the circle with microphones lowered and mouths relaxed. Audience claps and waves. Do not introduce a singer close-up. No cuts, written words, additional protagonists, or watermarks.\noverall_soundscape:\nNo dialogue, singing, cheering or new sounds. <Audio 1> supplies the existing instrumental-tail timing.\nnon_diegetic_music:\nNo generated music. Keep the original source music supplied separately.",
+      "drive_audio": [
+        "11",
+        0
+      ],
+      "final_audio": [
+        "21",
+        0
+      ],
+      "ref_images.ref_image_0": [
+        "10",
+        0
+      ]
+    }
+  },
+  "13": {
+    "class_type": "BasicGuider",
+    "inputs": {
+      "model": [
+        "31",
+        0
+      ],
+      "conditioning": [
+        "12",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "RandomNoise",
+    "inputs": {
+      "noise_seed": 20261028
+    }
+  },
+  "15": {
+    "class_type": "KSamplerSelect",
+    "inputs": {
+      "sampler_name": "res_multistep"
+    }
+  },
+  "16": {
+    "class_type": "BasicScheduler",
+    "inputs": {
+      "model": [
+        "31",
+        0
+      ],
+      "scheduler": "simple",
+      "steps": 8,
+      "denoise": 1.0
+    }
+  },
+  "17": {
+    "class_type": "SamplerCustomAdvanced",
+    "inputs": {
+      "noise": [
+        "14",
+        0
+      ],
+      "guider": [
+        "13",
+        0
+      ],
+      "sampler": [
+        "15",
+        0
+      ],
+      "sigmas": [
+        "16",
+        0
+      ],
+      "latent_image": [
+        "12",
+        1
+      ]
+    }
+  },
+  "18": {
+    "class_type": "MiniMaxH3AVDecodeT8",
+    "inputs": {
+      "av_latent": [
+        "17",
+        0
+      ],
+      "video_vae": [
+        "3",
+        0
+      ],
+      "audio_vae": [
+        "4",
+        0
+      ]
+    }
+  },
+  "19": {
+    "class_type": "CreateVideo",
+    "inputs": {
+      "images": [
+        "18",
+        0
+      ],
+      "fps": 24.0,
+      "audio": [
+        "12",
+        2
+      ]
+    }
+  },
+  "20": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "19",
+        0
+      ],
+      "filename_prefix": "ancient-rap-battle/suno-chibi/mv-v2/END02B",
+      "format": "auto",
+      "format.codec": "auto"
+    }
+  },
+  "21": {
+    "class_type": "LoadAudio",
+    "inputs": {
+      "audio": "ancient-rap-battle/suno-chibi/mix (12).wav"
+    }
+  },
+  "30": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "1",
+        0
+      ],
+      "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+      "strength_model": 1.0
+    }
+  },
+  "31": {
+    "class_type": "LoraLoaderModelOnly",
+    "inputs": {
+      "model": [
+        "30",
+        0
+      ],
+      "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+      "strength_model": 1.0
+    }
+  }
+}

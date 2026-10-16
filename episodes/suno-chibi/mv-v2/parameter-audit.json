@@ -1,0 +1,366 @@
+[
+  {
+    "shot": "OPEN",
+    "prompt_id": "2e8dce66-54e2-47d0-ac5c-7f4e9b04aba9",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "A01",
+    "prompt_id": "1eed0bb9-7e53-42e8-bfcd-5bc9fc8e17ce",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "A02",
+    "prompt_id": "d7ae1486-40d2-44f5-aca3-a119f0be7324",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "A03",
+    "prompt_id": "6b576d60-9691-4ea4-a18a-417330b45cd9",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "A04",
+    "prompt_id": "c4e1ef3f-11f9-43c5-bcec-9c38031e1c0a",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "BRIDGE01",
+    "prompt_id": "ce3c3c98-6d28-4e07-b641-2ab5e448361c",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "BRIDGE02",
+    "prompt_id": "9e14260a-38c0-4fc1-b6d6-7888bb3bf284",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "B01",
+    "prompt_id": "5ed733a6-3563-445a-a7ae-252196a13f17",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "B02",
+    "prompt_id": "a1936a47-790d-4dac-910e-19208a397518",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "B03",
+    "prompt_id": "6a86469a-4946-41f3-a1ba-ef3f9b7bc139",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "B04",
+    "prompt_id": "faee1115-468c-4c34-8700-7920d542394e",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "END01",
+    "prompt_id": "ed99c6a8-ab8e-4486-8daa-3c78df2e8733",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  },
+  {
+    "shot": "END02B",
+    "prompt_id": "300773ee-e08a-47f2-b9ea-7a158890c49f",
+    "unet": "minimax_h3_hybrid_fl2va_ref2va_b25-49-int8.safetensors",
+    "loras": [
+      {
+        "model": [
+          "1",
+          0
+        ],
+        "lora_name": "minimax_h3_fl2v_turbo_8step_v1.0_comfyui_bf16.safetensors",
+        "strength_model": 1.0
+      },
+      {
+        "model": [
+          "30",
+          0
+        ],
+        "lora_name": "h3-realism-people-t2v-i2v-r2v.safetensors",
+        "strength_model": 1.0
+      }
+    ],
+    "steps": 8,
+    "size": [
+      1216,
+      672
+    ]
+  }
+]

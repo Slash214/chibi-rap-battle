@@ -1,0 +1,11 @@
+{
+  "id": "BRIDGE02",
+  "source_start_frame": 427,
+  "source_end_frame": 545,
+  "timeline_frames": 118,
+  "lead_frames": 0,
+  "generation_frames": 124,
+  "reference": "zhuge",
+  "lyric": "",
+  "prompt": "subject_definitions:\n<Subject 1> (S1) is Zhou Yu, the clean-shaven Chinese commander with black topknot crown and crimson bronze armor.\n<Subject 2> (S2) is Zhuge Liang, the Chinese scholar with short mustache and goatee, dark scholar hat, ivory and blue-gray robes and broad white feather fan.\nBoth characters and the hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous cinematic 16:9 historical rap battle shot in the same ancient timber hall, warm red lanterns and cool blue moonlight shafts, casually seated audience around a clear circular battle floor.\nretention_analysis:\nPreserve each visible character's original identity, costume, handedness, the black handheld microphones, the rigid white FEATHER fan and the same hall lighting and geography from <Picture 1>.\ndetailed_description:\nReaction shot: camera pans from the blurred crimson shoulder of Zhou Yu to a sharp waist-up view of Zhuge Liang. He calmly waves his rigid white feather fan once at waist level, then raises the black microphone below his mouth, preparing to answer. Any existing backing adlibs in the audio are offscreen. Main characters do not lip sync those backing adlibs.\nThis is a performance reaction and stage atmosphere shot, not a new lyric. No added dialogue or mouthed words. Existing backing vocal adlibs remain offscreen.\nMain singer's face stays in a frontal or three-quarter view with unobstructed lips. Each microphone stays in the RIGHT hand just below the mouth, not across the lips. Zhuge Liang's LEFT hand holds the white feather fan low. Natural silent reactions, no rap articulation by the main characters. Expressive but controlled arm gestures. Audience remains outside the battle circle. Keep both men distinct. No extra fingers, no changing props, no internal cuts, no written words or watermarks.\noverall_soundscape:\n<Audio 1> is the authoritative existing vocal performance and timing reference. Preserve it exactly; do not generate new lyrics, extra cheers, dialogue or repeated words.\nnon_diegetic_music:\nNo new generated music. The original Suno song is supplied separately for final mux."
+}

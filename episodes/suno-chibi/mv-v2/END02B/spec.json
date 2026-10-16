@@ -1,0 +1,11 @@
+{
+  "id": "END02B",
+  "source_start_frame": 907,
+  "source_end_frame": 1016,
+  "timeline_frames": 109,
+  "lead_frames": 0,
+  "generation_frames": 124,
+  "reference": "crowd",
+  "lyric": "",
+  "prompt": "subject_definitions:\n<Subject 1> is Zhou Yu in crimson bronze armor. <Subject 2> is Zhuge Liang in ivory scholar robes, black hat and white feather fan. The two men, audience and hall are defined by <Picture 1>.\nsummary:\n[reference generation] One continuous CRANE UP AND PULL BACK wide establishing shot of the whole rap battle venue at the end of the music video. Camera movement is the main action.\nretention_analysis:\nPreserve the identities, clothing, black microphones, white FEATHER fan, crowd and architecture of <Picture 1>.\ndetailed_description:\nBegin with a WIDE shot from behind the front row of spectators, both men visible head-to-toe on the circular stage. During the entire shot the camera physically travels backward and rises upward several meters, revealing increasingly more seated audience rows, circular floor and red lantern hall architecture. By the end this is a HIGH ANGLE EXTREME WIDE shot of the entire hall. Both main characters get visibly SMALLER in the frame. Clear perspective parallax as foreground spectators slide down and out of view. This is a real cinematic crane withdrawal, not a stationary two shot or a zoom toward faces. The two rappers remain standing in the circle with microphones lowered and mouths relaxed. Audience claps and waves. Do not introduce a singer close-up. No cuts, written words, additional protagonists, or watermarks.\noverall_soundscape:\nNo dialogue, singing, cheering or new sounds. <Audio 1> supplies the existing instrumental-tail timing.\nnon_diegetic_music:\nNo generated music. Keep the original source music supplied separately."
+}

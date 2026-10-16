@@ -1,0 +1,11 @@
+{
+  "original_audio_filename": "赤壁借风.m4a",
+  "origin": "User-downloaded Suno song",
+  "original_source_path": "F:\\download\\赤壁借风.m4a",
+  "packaged_source": "episodes/suno-chibi/赤壁借风.m4a",
+  "sha256": "cfcb40aef7e5d6919cd0ab4ec14a91235a854fd782cb0ddc9b063634d4a79348",
+  "source_verified_identical": true,
+  "mix": "episodes/suno-chibi/song.wav",
+  "lip_drive": "episodes/suno-chibi/vocals.wav",
+  "excluded": "ACE-Step test audio, old mv-v1, rejected END02 take, model weights and virtual environments"
+}
